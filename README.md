@@ -4,3 +4,4 @@ With support for square avatars, transparent PNG avatars and easy-to-read colour
 # How to use
 Midnight can be used with any browser extension that allows CSS overwriting, such as Stylus.
 You can install the theme on Stylus.
+https://userstyles.world/style/1231/midnight
