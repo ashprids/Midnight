@@ -1,0 +1,467 @@
+/*
+-----------------------------------------------
+-----------------------------------------------
+RobloxForum: Midnight Theme v1.5
+Made by caci
+
+NOTABLE CHANGES:
+ >site redirects (likes, "show more", etc) made more muted red
+ >guest-only UI has been coloured
+ >"square avatars when??" can be customized below
+ >people with no avatars have a pleasant surprise
+ >various pages such as premium, reputation, etc have been coloured
+ >improved several embeds (e.g. inline spoilers are more visible)
+
+Enjoy :)
+-----------------------------------------------
+-----------------------------------------------
+
+Custom Options */
+
+.avatar {
+    border-radius: 10% 
+        /* This controls the roundness of avatars. 
+        50% (and higher) = Completely circular
+        0% = Square */
+}
+/*
+-----------------------------------------------
+----------------------------------------------- */
+
+
+/* Global */
+ :root {
+    color: #ddd;
+    background: #200;
+    background: linear-gradient(to bottom, #290000 0px, #000 100%);
+    background: #220000;
+    background: linear-gradient(to bottom, #1a0000 0px, #060000 100%);
+}
+.blockStatus {
+    background: #262626
+}
+.p-sectionLinks {
+    background: #340000;
+    box-shadow: inset 0 0 1em #000, 0 0 0 #000;
+    border-bottom: none;
+}
+a {
+    color: #c93f3f;
+    /* vouch to the theme designers, "a" sure is descriptive and easy to understand... 
+    seems to be for clickable links and such.. but only some?? */
+}
+::selection {
+    color: #8f8f8f;
+    background: #3d3d3d;
+}
+body .uix_searchBar .uix_searchBarInner .uix_searchForm {
+    background: #111111;
+}
+.avatar img {
+    background-color: #ffffff00;
+}
+.menu-content {
+    background: #262626;
+}
+.block-filterBar {
+    background: #0c0c0c;
+}
+.formSubmitRow-bar {
+    background: #0c0c0c;
+}
+.messageNotice {
+    background: #212428;
+}
+.messageNotice.messageNotice--highlighted {
+    background: #212428;
+}
+.message-cell.message-cell--extra {
+    background: #232323;
+}
+.blockMessage {
+    background: #262626;
+}
+.block-filterBar .filterBar-filterToggle:hover, .block-filterBar .filterBar-menuTrigger:hover {
+    background: #363636;
+}
+.menu-header {
+    background: #171717;
+}
+.menu-footer {
+    background: #171717;
+}
+.block-minorHeader.uix_threadListSeparator {
+    background: #313131;
+}
+.inputGroup.inputGroup--joined .inputGroup-text {
+    background: #313131;
+}
+.pageNav-jump {
+    background: #222222;
+}
+.pageNav-page {
+    background: #222222;
+}
+.js-alertsMenuBody .alert.is-read, .alert-list .alert.is-read {
+    background: #262626;
+}
+.js-alertsMenuBody .alert.is-unread, .alert-list .alert.is-unread {
+    background: #313131
+}
+.menu-row.menu-row--alt {
+    background: #222222;
+}
+.inputTypes-input:checked+.inputTypes-display, .inputTypes-display:hover {
+    background: linear-gradient(180deg, #1f1f1f, #272727);
+}
+.structItem--thread:hover {
+    background-color: #ffffff00
+}
+.overlay {
+    background: #131313;
+}
+.attachmentUploads-banner {
+    background: #131313;
+}
+.menu-tabHeader {
+    background: #383838;
+}
+.input:focus, .input.is-focused, .inputGroup:focus-within, #XF .fr-box.fr-basic.is-focused, .codeEditor.CodeMirror.CodeMirror-focused {
+    --input-border-heavy: #6d3333;
+    --input-border-light: #402323;
+}
+.avatar.avatar--default.avatar--default--dynamic, .avatar.avatar--default.avatar--default--text {
+    font-family: "trebuchet ms" /* would've done comic sans but people were crying about it smh */
+}
+.structItem.structItem--note {
+    background: #202020
+}
+.avatar.avatar--separated {
+    border: 0px
+}
+/* Homepage */
+ .block-container {
+    background: #191919;
+}
+.block-footer {
+    background: #0c0c0c;
+    color: #525252;
+}
+.button.button--cta, button.button a.button.button--cta {
+    background: #831010
+}
+.button.button--cta:hover, button.button a.button.button--cta:hover, .button.button--cta:focus, button.button a.button.button--cta:focus {
+    background: #a92d2d
+}
+.node-body {
+    background: #191919;
+}
+.node--depth2:nth-child(even) .node-body {
+    background-color: #0e0e0e;
+}
+.structItem:nth-child(even) {
+    background-color: #0e0e0e;
+}
+.button--cta {
+    background: #2f2c2c;
+}
+.button--cta:focus {
+    background: #ba1d15;
+}
+/* Thread */
+ .block--messages.block .message, .js-quickReply.block .message, .block--messages .block-row, .js-quickReply .block-row {
+    /* "don't use adjoi-- oh it doesnt do this now */
+    background: #191919;
+}
+.message-cell.message-cell--user, .message-cell.message-cell--action {
+    background: #262626;
+}
+.button.button--link, button.button a.button.button--link {
+    background: #181818;
+    border: 1px solid rgb(86 86 86 / 12%);
+}
+.message-attribution {
+    color: #ff372d
+}
+.reactionsBar .reactionSummary>li, .message-responseRow .reactionSummary>li {
+    background: #ffffff00;
+}
+.message-cell.message-cell--vote {
+    background: #0c0c0c;
+}
+.contentVote {
+    color: #5d5d5d;
+}
+.postbitUserFbStats {
+    color: #777777;
+}
+a:hover {
+    color: #ff372d;
+}
+.block--messages.block .message, .js-quickReply.block .message, .block--messages .block-row, .js-quickReply .block-row {
+    color: #e5e5e5;
+}
+.message-newIndicator, a.message-newIndicator {
+    color: #ffffff00;
+    background-color: #ffffff00;
+    /* because who cares about this */
+}
+.fr-box.fr-basic {
+    background: #262626
+}
+.message-articleUserInfo {
+    background: #262626
+}
+/* Rank Colors */
+ .username--style6 {
+    /* Verified */
+    color: #c828bc
+}
+.userBanner.userBanner--green {
+    border-color: #ffffff00;
+    background: #c828bc
+}
+.userBanner.userBanner--royalBlue {
+    /* Moderator */
+    border-color: #ffffff00;
+    background: #2b4595;
+}
+.username--style4 {
+    color: #3e61cc;
+}
+.username--style11 {
+    /* Head Moderator */
+    color: #4384db;
+}
+.userBanner.userBanner--blue {
+    background: #4384db;
+    border-color: #ffffff00;
+}
+.username--style7 {
+    /* VIP */
+    color: #129716;
+}
+.rank1banner {
+    background-color: #129716;
+    color: #e5e5e5;
+}
+.username--style8 {
+    /* Pro */
+    color: #2c8aff;
+}
+.rank2banner {
+    background-color: #2c8aff;
+    color: #e5e5e5;
+}
+/* Ultra is fine as is */
+ .username--style10 {
+    /* Banned */
+    color: #646464;
+}
+.userBanner.userBanner--hidden {
+    background: #2b2b2b;
+}
+/* BB Code Stuff */
+ .bbCodeBlock {
+    background: #242424;
+}
+textarea.input.input--fitHeight {
+    background: #2b2b2b
+}
+.bbCodeBlock-title {
+    background: #141414;
+}
+.fr-popup .fr-buttons.fr-tabs {
+    background: #262626ab
+}
+.fr-popup .fr-image-upload-layer:hover {
+    background: #4d4d4d8c
+}
+.fr-popup .fr-input-line input[type="text"], .fr-popup .fr-input-line textarea {
+    background: #39393973
+}
+.fr-view>table>thead>tr>td, .fr-view>table>tbody>tr>td {
+    background: #353535
+}
+.fr-popup {
+    background: #2f2f2fab
+}
+.bbCodeBlock-expandLink {
+    background: linear-gradient(to bottom, rgba(66, 70, 77, 0) 0%, #0a0a0a 60%);
+}
+.bbCodeBlock--code.bbCodeBlock--screenLimited .bbCodeBlock-header {
+    background: #141414
+}
+.bbCodeBlock--code .bbCodeBlock-content {
+    background-color: #ffffff00
+}
+.fr-view blockquote {
+    background: #1e1e1e
+}
+.fr-view blockquote[data-quote]:before {
+    background: #141414
+}
+/* Mini-Profile */
+ .tooltip--bookmark .tooltip-content, .tooltip--member .tooltip-content, .tooltip--share .tooltip-content {
+    border: 0;
+    background: #0f0f0ff5;
+}
+.memberTooltip-separator {
+    margin: 0;
+}
+.fr-box.fr-basic.is-preview, .fr-box.fr-basic.is-preview .fr-toolbar .fr-btn-grp.rte-tab--preview {
+    background-color: #181818
+}
+.memberTooltip-header {
+    background: #04040482;
+}
+.tooltip--bookmark .tooltip-content, .tooltip--member .tooltip-content, .tooltip--share .tooltip-content {
+    color: #e1e1e1;
+}
+.bbCodeInlineSpoiler {
+    text-shadow: #fff 0 0 9px
+}
+.fr-toolbar .fr-more-toolbar {
+    background-color: #363636
+}
+.bbCodeInline {
+    background: #2d2d2d;
+    color: #b0b0b0
+}
+.pairs>dt {
+    color: #7a7a7a;
+}
+.memberTooltip--withBanner .memberTooltip-blurbContainer {
+    background: rgb(0 0 0 / 68%);
+}
+.pollResult-voters {
+    background: #252525
+}
+.pollResult.pollResult--showVoters:hover {
+    background: #2d2d2d
+}
+/* Profile */
+ .input {
+    background: #0d0d0d;
+}
+.message-responseRow {
+    background: #101010;
+}
+.memberHeader-main {
+    background: #131313;
+}
+.formRow>dt {
+    background: #151515;
+}
+.overlay-title {
+    background: #131313;
+}
+.dataList-row.dataList-row--header .dataList-cell {
+    background: #262626;
+}
+.memberHeader-avatar {
+    bottom: -120px;
+    left: -5px;
+}
+.js-alertsMenuBody .alert.is-recently-read, .alert-list .alert.is-recently-read {
+    background: #323232
+}
+/* Footer */
+ .uix_extendedFooter {
+    background: linear-gradient(to bottom, #2000 0px, #000 100%);;
+}
+.p-footer-inner {
+    background: #000;
+}
+.p-footer-copyrightRow {
+    background: #000;
+    border-top: #000
+}
+/* Other Pages */
+ .blockLink {
+    background: #0e0e0e;
+}
+.menu-linkRow.is-selected, .menu-linkRow:hover, .menu-linkRow:focus {
+    background: #333
+}
+.blockLink.is-selected {
+    background: #262626;
+}
+.memberOverviewBlock-seeMore {
+    background: #262626;
+}
+.fr-box.fr-basic.is-focused {
+    background: #262626
+}
+.fr-box.fr-basic.is-focused .fr-toolbar.fr-top {
+    background: #ffffff00
+}
+.message--report.is-report .message-cell--user {
+    background: #333
+}
+.p-pageWrapper .uix_welcomeSection {
+    background: #26252591
+}
+.notice.notice--primary {
+    background: #171717;
+    border: 2px solid #701c18
+}
+.notice.notice--primary .uix_noticeIcon {
+    background: #701c18
+}
+tr:hover {
+    background: #487648
+}
+.purchase-button {
+    background-color: #53a453 !important
+}
+.purchase-button:hover {
+    background-color: #932626 !important
+}
+.rank-regular {
+    color: #b5b5b5
+}
+/* Special */
+ .username--style3 {
+    color: red;
+    animation: important_name 3s linear 1s infinite;
+}
+@keyframes important_name {
+    0% {
+        color:red;
+    }
+    20% {
+        color:yellow;
+    }
+    40% {
+        color:green;
+    }
+    60% {
+        color:blue;
+    }
+    80% {
+        color:purple;
+    }
+    100% {
+        color:red;
+    }
+}
+
+/*
+Footnote:
+
+Honestly, the most annoying thing about Midnight is being a non-premium user for it. Advertisements ruin the whole theme 
+because they're so white and bright.
+If you want to enjoy this theme to its fullest, BUY PREMIUM!!!! It's cool and you get many things other than a free adblock!
+$10!!!
+
+Seriously, I tried to change the colour of ads myself but their CSS changes for every ad so it's pointless..
+
+If you want to edit Midnight and re-publish, please feel free! Just leave my credit at the top (and maybe a footnote message below
+this one? Would be cool)
+
+Credits to the guy that made an RF dark theme for its old Light default theme, I stole his gradient bar thingy to make the
+section at the top that I'm pretty sure no one uses but everyone sees soooooooo
+
+Fun fact: rbxcentral.com was going to be robloxforum's domain if Jeruhmi hadn't bought RobloxForum.com.
+You can still access RF via that domain, which is why I've added it to the "Applies to" list.
