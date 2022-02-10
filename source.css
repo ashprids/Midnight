@@ -1,16 +1,20 @@
-/*
------------------------------------------------
------------------------------------------------
-RobloxForum: Midnight Theme v1.5
-Made by caci
+/* ==UserStyle==
+@name           Midnight for RobloxForum
+@namespace      robloxforum.com
+@version        1.6.5
+@description    Midnight is a darker-mode CSS site theme for RobloxForum.com.
+@author         cactile
+==/UserStyle== */
 
+@-moz-document domain("robloxforum.com"), domain("rbxcentral.com") {
+    /**
+
+-----------------------------------------------
+-----------------------------------------------
 NOTABLE CHANGES:
- >site redirects (likes, "show more", etc) made more muted red
- >guest-only UI has been coloured
- >"square avatars when??" can be customized below
- >people with no avatars have a pleasant surprise
- >various pages such as premium, reputation, etc have been coloured
- >improved several embeds (e.g. inline spoilers are more visible)
+ > Updated github repository! https://github.com/Cactile/Midnight
+ > Midnight now operates under the GNU 3.0 Licence.
+ > Changed the Head Mod role to be darker than Mod role
 
 Enjoy :)
 -----------------------------------------------
@@ -24,7 +28,22 @@ Custom Options */
         50% (and higher) = Completely circular
         0% = Square */
 }
+   
+widgetbot-crate {
+     visibility: hidden
+        /* This determines the visibility of the Discord plugin in the left corner. 
+           Set to "visible" to show the icon. */
+}
+    
+.username--style3 {
+    color: red;
+    animation: important_name 3s linear 1s infinite;
+        /* This gives the Admin roles a nice rainbow animation.
+           Remove the "animation" line to disable this animation. */
+}
 /*
+Delete lines 203-222 line to show the "Most viewed content" menu on the homepage and recent activity page!
+Credit goes to Matieo33 for integrating this.
 -----------------------------------------------
 ----------------------------------------------- */
 
@@ -69,6 +88,9 @@ body .uix_searchBar .uix_searchBarInner .uix_searchForm {
 .formSubmitRow-bar {
     background: #0c0c0c;
 }
+    body .uix_searchBar .uix_searchBarInner .uix_searchForm.uix_searchForm--focused {
+        background: #272727
+    }
 .messageNotice {
     background: #212428;
 }
@@ -102,6 +124,16 @@ body .uix_searchBar .uix_searchBarInner .uix_searchForm {
 .pageNav-page {
     background: #222222;
 }
+    .structItem-pageJump a:hover {
+        background: #36100e
+    }
+    .structItem-pageJump a {
+        background: #313131;
+        color: #888888
+    }
+    .structItem:hover .structItem-pageJump a, .has-touchevents .structItem-pageJump a {
+        opacity: 0.5
+    }
 .js-alertsMenuBody .alert.is-read, .alert-list .alert.is-read {
     background: #262626;
 }
@@ -139,6 +171,14 @@ body .uix_searchBar .uix_searchBarInner .uix_searchForm {
 .avatar.avatar--separated {
     border: 0px
 }
+.p-header .p-header-logo img {
+    content: url("https://raw.githubusercontent.com/Cactile/Midnight/main/MidnightLogo2.png");
+}
+
+.p-footer-copyrightRow:before {
+    content:"Midnight Theme for RobloxForum by caci (Thanks matieo33 for helping out!)";
+    padding-left: 55px
+}
 /* Homepage */
  .block-container {
     background: #191919;
@@ -147,6 +187,7 @@ body .uix_searchBar .uix_searchBarInner .uix_searchForm {
     background: #0c0c0c;
     color: #525252;
 }
+
 .button.button--cta, button.button a.button.button--cta {
     background: #831010
 }
@@ -168,6 +209,30 @@ body .uix_searchBar .uix_searchBarInner .uix_searchForm {
 .button--cta:focus {
     background: #ba1d15;
 }
+    
+    
+/* Delete lines 203-222 line to show the "Most viewed content" menu on the homepage and recent activity page! */
+    
+.p-body-pageContent .block ~ .block .block-container .block-body .structItemContainer .structItem--thread {
+    display: none
+}
+
+.p-body-pageContent .block ~ .block .block-container .block-header {
+    display: none
+}
+
+/* part 2 for robloxforum.com/whats-new */
+.p-body-pageContent .block ~ .block ~ .block .block-container .block-body .structItemContainer .structItem--thread {
+    display: none
+}
+
+.p-body-pageContent .block ~ .block ~ .block .block-container .block-header {
+    display: none
+}
+    
+/* ###################### */
+    
+    
 /* Thread */
  .block--messages.block .message, .js-quickReply.block .message, .block--messages .block-row, .js-quickReply .block-row {
     /* "don't use adjoi-- oh it doesnt do this now */
@@ -224,17 +289,17 @@ a:hover {
 .userBanner.userBanner--royalBlue {
     /* Moderator */
     border-color: #ffffff00;
-    background: #2b4595;
+    background: #5e72ff;
 }
 .username--style4 {
-    color: #3e61cc;
+    color: #5e72ff;
 }
 .username--style11 {
     /* Head Moderator */
-    color: #4384db;
+    color: #4c3cf1;
 }
 .userBanner.userBanner--blue {
-    background: #4384db;
+    background: #4c3cf1;
     border-color: #ffffff00;
 }
 .username--style7 {
@@ -265,11 +330,17 @@ a:hover {
  .bbCodeBlock {
     background: #242424;
 }
+    .bbTable>table>thead>tr>td, .bbTable>table>tbody>tr>td {
+        background: #272727
+    }
 textarea.input.input--fitHeight {
     background: #2b2b2b
 }
 .bbCodeBlock-title {
     background: #141414;
+}
+.message-attachments {
+      background: #292929  
 }
 .fr-popup .fr-buttons.fr-tabs {
     background: #262626ab
@@ -279,6 +350,9 @@ textarea.input.input--fitHeight {
 }
 .fr-popup .fr-input-line input[type="text"], .fr-popup .fr-input-line textarea {
     background: #39393973
+}
+.message-expandLink {
+    background: linear-gradient(to bottom, rgba(56,60,66,0) 0%, #492121 70%)
 }
 .fr-view>table>thead>tr>td, .fr-view>table>tbody>tr>td {
     background: #353535
@@ -381,6 +455,9 @@ textarea.input.input--fitHeight {
  .blockLink {
     background: #0e0e0e;
 }
+    .block-row.block-row--alt {
+        background: #272727
+    }
 .menu-linkRow.is-selected, .menu-linkRow:hover, .menu-linkRow:focus {
     background: #333
 }
@@ -422,10 +499,7 @@ tr:hover {
     color: #b5b5b5
 }
 /* Special */
- .username--style3 {
-    color: red;
-    animation: important_name 3s linear 1s infinite;
-}
+ 
 @keyframes important_name {
     0% {
         color:red;
@@ -446,22 +520,32 @@ tr:hover {
         color:red;
     }
 }
-
 /*
-Footnote:
 
 Honestly, the most annoying thing about Midnight is being a non-premium user for it. Advertisements ruin the whole theme 
 because they're so white and bright.
 If you want to enjoy this theme to its fullest, BUY PREMIUM!!!! It's cool and you get many things other than a free adblock!
 $10!!!
 
-Seriously, I tried to change the colour of ads myself but their CSS changes for every ad so it's pointless..
-
-If you want to edit Midnight and re-publish, please feel free! Just leave my credit at the top (and maybe a footnote message below
-this one? Would be cool)
-
-Credits to the guy that made an RF dark theme for its old Light default theme, I stole his gradient bar thingy to make the
-section at the top that I'm pretty sure no one uses but everyone sees soooooooo
-
 Fun fact: rbxcentral.com was going to be robloxforum's domain if Jeruhmi hadn't bought RobloxForum.com.
 You can still access RF via that domain, which is why I've added it to the "Applies to" list.
+ 
+-----------------------------------------------
+-----------------------------------------------
+ 
+Copyright (C) 2022 Cactile
+ 
+This program is free software: you can redistribute it and/or modify it under the terms 
+of the GNU General Public License as published by the Free Software Foundation, either 
+version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
+without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+
+See the GNU General Public License for more details.
+https://opensource.org/licenses/GPL-3.0
+ 
+*/
+
+    
+}
