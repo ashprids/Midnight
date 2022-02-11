@@ -1,55 +1,73 @@
-/* ==UserStyle==
-@name           Midnight for RobloxForum
-@namespace      robloxforum.com
-@version        1.6.5
-@description    Midnight is a darker-mode CSS site theme for RobloxForum.com.
-@author         cactile
-==/UserStyle== */
-
-@-moz-document domain("robloxforum.com"), domain("rbxcentral.com") {
-    /**
-
+@-moz-document domain("robloxforum.com") {
+/**
 -----------------------------------------------
 -----------------------------------------------
-NOTABLE CHANGES:
- > Updated github repository! https://github.com/Cactile/Midnight
- > Midnight now operates under the GNU 3.0 Licence.
- > Changed the Head Mod role to be darker than Mod role
-
-Enjoy :)
------------------------------------------------
------------------------------------------------
-
 Custom Options */
-
 .avatar {
-    border-radius: 10% 
-        /* This controls the roundness of avatars. 
-        50% (and higher) = Completely circular
+    border-radius: 10%/* This controls the roundness of avatars. 
+        50%+ = Completely circular
         0% = Square */
 }
-   
-widgetbot-crate {
-     visibility: hidden
-        /* This determines the visibility of the Discord plugin in the left corner. 
-           Set to "visible" to show the icon. */
-}
-    
+
 .username--style3 {
     color: red;
     animation: important_name 3s linear 1s infinite;
-        /* This gives the Admin roles a nice rainbow animation.
+    /* This gives the Admin roles a nice rainbow animation.
            Remove the "animation" line to disable this animation. */
 }
-/*
-Delete lines 203-222 line to show the "Most viewed content" menu on the homepage and recent activity page!
-Credit goes to Matieo33 for integrating this.
------------------------------------------------
------------------------------------------------ */
 
+/* You can customize the rainbow animation below.*/
+@keyframes important_name {
+    0% {
+        color: #fd5050;
+    }
+    20% {
+        color: #ffff5d;
+    }
+    40% {
+        color: #509350;
+    }
+    60% {
+        color: #6363ff;
+    }
+    80% {
+        color: #883b88;
+    }
+    100% {
+        color: #fd5050;
+    }
+}
+/**
+-----------------------------------------------
+-----------------------------------------------
+*/
+}
+
+@-moz-document domain("robloxforum.com") {
+/**
+-----------------------------------------------
+-----------------------------------------------
+Hide "Most Viewed Content" :
+If you want to display the "Most Viewed Content Today" section on the homepage,
+delete the code in this section. */
+.p-body-pageContent .block ~ .block .block-container .block-body .structItemContainer .structItem--thread {
+    display: none
+}
+
+.p-body-pageContent .block ~ .block .block-container .block-header {
+    display: none
+}
+/**
+-----------------------------------------------
+-----------------------------------------------
+*/
+}
+
+@-moz-document domain("robloxforum.com") {
+/* Main Code
 
 /* Global */
- :root {
+:root {
     color: #ddd;
     background: #200;
     background: linear-gradient(to bottom, #290000 0px, #000 100%);
@@ -70,8 +88,8 @@ a {
     seems to be for clickable links and such.. but only some?? */
 }
 ::selection {
-    color: #8f8f8f;
-    background: #3d3d3d;
+    color: #515151;
+    background: #acacac;
 }
 body .uix_searchBar .uix_searchBarInner .uix_searchForm {
     background: #111111;
@@ -88,9 +106,9 @@ body .uix_searchBar .uix_searchBarInner .uix_searchForm {
 .formSubmitRow-bar {
     background: #0c0c0c;
 }
-    body .uix_searchBar .uix_searchBarInner .uix_searchForm.uix_searchForm--focused {
-        background: #272727
-    }
+body .uix_searchBar .uix_searchBarInner .uix_searchForm.uix_searchForm--focused {
+    background: #272727
+}
 .messageNotice {
     background: #212428;
 }
@@ -103,7 +121,8 @@ body .uix_searchBar .uix_searchBarInner .uix_searchForm {
 .blockMessage {
     background: #262626;
 }
-.block-filterBar .filterBar-filterToggle:hover, .block-filterBar .filterBar-menuTrigger:hover {
+.block-filterBar .filterBar-filterToggle:hover,
+.block-filterBar .filterBar-menuTrigger:hover {
     background: #363636;
 }
 .menu-header {
@@ -124,26 +143,30 @@ body .uix_searchBar .uix_searchBarInner .uix_searchForm {
 .pageNav-page {
     background: #222222;
 }
-    .structItem-pageJump a:hover {
-        background: #36100e
-    }
-    .structItem-pageJump a {
-        background: #313131;
-        color: #888888
-    }
-    .structItem:hover .structItem-pageJump a, .has-touchevents .structItem-pageJump a {
-        opacity: 0.5
-    }
-.js-alertsMenuBody .alert.is-read, .alert-list .alert.is-read {
+.structItem-pageJump a:hover {
+    background: #36100e
+}
+.structItem-pageJump a {
+    background: #313131;
+    color: #888888
+}
+.structItem:hover .structItem-pageJump a,
+.has-touchevents .structItem-pageJump a {
+    opacity: 0.5
+}
+.js-alertsMenuBody .alert.is-read,
+.alert-list .alert.is-read {
     background: #262626;
 }
-.js-alertsMenuBody .alert.is-unread, .alert-list .alert.is-unread {
+.js-alertsMenuBody .alert.is-unread,
+.alert-list .alert.is-unread {
     background: #313131
 }
 .menu-row.menu-row--alt {
     background: #222222;
 }
-.inputTypes-input:checked+.inputTypes-display, .inputTypes-display:hover {
+.inputTypes-input:checked + .inputTypes-display,
+.inputTypes-display:hover {
     background: linear-gradient(180deg, #1f1f1f, #272727);
 }
 .structItem--thread:hover {
@@ -158,12 +181,17 @@ body .uix_searchBar .uix_searchBarInner .uix_searchForm {
 .menu-tabHeader {
     background: #383838;
 }
-.input:focus, .input.is-focused, .inputGroup:focus-within, #XF .fr-box.fr-basic.is-focused, .codeEditor.CodeMirror.CodeMirror-focused {
+.input:focus,
+.input.is-focused,
+.inputGroup:focus-within,
+#XF .fr-box.fr-basic.is-focused,
+.codeEditor.CodeMirror.CodeMirror-focused {
     --input-border-heavy: #6d3333;
     --input-border-light: #402323;
 }
-.avatar.avatar--default.avatar--default--dynamic, .avatar.avatar--default.avatar--default--text {
-    font-family: "trebuchet ms" /* would've done comic sans but people were crying about it smh */
+.avatar.avatar--default.avatar--default--dynamic,
+.avatar.avatar--default.avatar--default--text {
+    font-family: "trebuchet ms"/* would've done comic sans but people were crying about it smh */
 }
 .structItem.structItem--note {
     background: #202020
@@ -174,13 +202,26 @@ body .uix_searchBar .uix_searchBarInner .uix_searchForm {
 .p-header .p-header-logo img {
     content: url("https://raw.githubusercontent.com/Cactile/Midnight/main/MidnightLogo2.png");
 }
-
-.p-footer-copyrightRow:before {
-    content:"Midnight Theme for RobloxForum by caci (Thanks matieo33 for helping out!)";
-    padding-left: 55px
+.input {
+    background: #0d0d0d;
+    color: #aeaeae
 }
+.input:focus {
+    background: #282828
+}
+.uix_copyrightBlock:before {
+    content: "Midnight For RobloxForum © Cactile";
+    /* You can modify this line if publishing your own fork of the style
+       to credit yourself, however you must still keep "© Cactile" in 
+       the content. 
+    
+       Midnight For RobloxForum © Cactile | [theme name] Version by [your name]
+        This is a good example of how to modify the line.
+    */
+}
+
 /* Homepage */
- .block-container {
+.block-container {
     background: #191919;
 }
 .block-footer {
@@ -188,10 +229,14 @@ body .uix_searchBar .uix_searchBarInner .uix_searchForm {
     color: #525252;
 }
 
-.button.button--cta, button.button a.button.button--cta {
+.button.button--cta,
+button.button a.button.button--cta {
     background: #831010
 }
-.button.button--cta:hover, button.button a.button.button--cta:hover, .button.button--cta:focus, button.button a.button.button--cta:focus {
+.button.button--cta:hover,
+button.button a.button.button--cta:hover,
+.button.button--cta:focus,
+button.button a.button.button--cta:focus {
     background: #a92d2d
 }
 .node-body {
@@ -209,46 +254,29 @@ body .uix_searchBar .uix_searchBarInner .uix_searchForm {
 .button--cta:focus {
     background: #ba1d15;
 }
-    
-    
-/* Delete lines 203-222 line to show the "Most viewed content" menu on the homepage and recent activity page! */
-    
-.p-body-pageContent .block ~ .block .block-container .block-body .structItemContainer .structItem--thread {
-    display: none
-}
 
-.p-body-pageContent .block ~ .block .block-container .block-header {
-    display: none
-}
 
-/* part 2 for robloxforum.com/whats-new */
-.p-body-pageContent .block ~ .block ~ .block .block-container .block-body .structItemContainer .structItem--thread {
-    display: none
-}
-
-.p-body-pageContent .block ~ .block ~ .block .block-container .block-header {
-    display: none
-}
-    
-/* ###################### */
-    
-    
 /* Thread */
- .block--messages.block .message, .js-quickReply.block .message, .block--messages .block-row, .js-quickReply .block-row {
-    /* "don't use adjoi-- oh it doesnt do this now */
+.block--messages.block .message,
+.js-quickReply.block .message,
+.block--messages .block-row,
+.js-quickReply .block-row {
     background: #191919;
 }
-.message-cell.message-cell--user, .message-cell.message-cell--action {
+.message-cell.message-cell--user,
+.message-cell.message-cell--action {
     background: #262626;
 }
-.button.button--link, button.button a.button.button--link {
+.button.button--link,
+button.button a.button.button--link {
     background: #181818;
     border: 1px solid rgb(86 86 86 / 12%);
 }
 .message-attribution {
     color: #ff372d
 }
-.reactionsBar .reactionSummary>li, .message-responseRow .reactionSummary>li {
+.reactionsBar .reactionSummary > li,
+.message-responseRow .reactionSummary > li {
     background: #ffffff00;
 }
 .message-cell.message-cell--vote {
@@ -263,10 +291,14 @@ body .uix_searchBar .uix_searchBarInner .uix_searchForm {
 a:hover {
     color: #ff372d;
 }
-.block--messages.block .message, .js-quickReply.block .message, .block--messages .block-row, .js-quickReply .block-row {
+.block--messages.block .message,
+.js-quickReply.block .message,
+.block--messages .block-row,
+.js-quickReply .block-row {
     color: #e5e5e5;
 }
-.message-newIndicator, a.message-newIndicator {
+.message-newIndicator,
+a.message-newIndicator {
     color: #ffffff00;
     background-color: #ffffff00;
     /* because who cares about this */
@@ -278,13 +310,13 @@ a:hover {
     background: #262626
 }
 /* Rank Colors */
- .username--style6 {
+.username--style6 {
     /* Verified */
-    color: #c828bc
+    color: #d060c8
 }
 .userBanner.userBanner--green {
     border-color: #ffffff00;
-    background: #c828bc
+    background: #d060c8
 }
 .userBanner.userBanner--royalBlue {
     /* Moderator */
@@ -319,7 +351,7 @@ a:hover {
     color: #e5e5e5;
 }
 /* Ultra is fine as is */
- .username--style10 {
+.username--style10 {
     /* Banned */
     color: #646464;
 }
@@ -327,12 +359,13 @@ a:hover {
     background: #2b2b2b;
 }
 /* BB Code Stuff */
- .bbCodeBlock {
+.bbCodeBlock {
     background: #242424;
 }
-    .bbTable>table>thead>tr>td, .bbTable>table>tbody>tr>td {
-        background: #272727
-    }
+.bbTable > table > thead > tr > td,
+.bbTable > table > tbody > tr > td {
+    background: #272727
+}
 textarea.input.input--fitHeight {
     background: #2b2b2b
 }
@@ -340,7 +373,7 @@ textarea.input.input--fitHeight {
     background: #141414;
 }
 .message-attachments {
-      background: #292929  
+    background: #292929
 }
 .fr-popup .fr-buttons.fr-tabs {
     background: #262626ab
@@ -348,13 +381,15 @@ textarea.input.input--fitHeight {
 .fr-popup .fr-image-upload-layer:hover {
     background: #4d4d4d8c
 }
-.fr-popup .fr-input-line input[type="text"], .fr-popup .fr-input-line textarea {
+.fr-popup .fr-input-line input[type="text"],
+.fr-popup .fr-input-line textarea {
     background: #39393973
 }
 .message-expandLink {
-    background: linear-gradient(to bottom, rgba(56,60,66,0) 0%, #492121 70%)
+    background: linear-gradient(to bottom, rgba(56, 60, 66, 0) 0%, #492121 70%)
 }
-.fr-view>table>thead>tr>td, .fr-view>table>tbody>tr>td {
+.fr-view > table > thead > tr > td,
+.fr-view > table > tbody > tr > td {
     background: #353535
 }
 .fr-popup {
@@ -376,20 +411,25 @@ textarea.input.input--fitHeight {
     background: #141414
 }
 /* Mini-Profile */
- .tooltip--bookmark .tooltip-content, .tooltip--member .tooltip-content, .tooltip--share .tooltip-content {
+.tooltip--bookmark .tooltip-content,
+.tooltip--member .tooltip-content,
+.tooltip--share .tooltip-content {
     border: 0;
     background: #0f0f0ff5;
 }
 .memberTooltip-separator {
     margin: 0;
 }
-.fr-box.fr-basic.is-preview, .fr-box.fr-basic.is-preview .fr-toolbar .fr-btn-grp.rte-tab--preview {
+.fr-box.fr-basic.is-preview,
+.fr-box.fr-basic.is-preview .fr-toolbar .fr-btn-grp.rte-tab--preview {
     background-color: #181818
 }
 .memberTooltip-header {
     background: #04040482;
 }
-.tooltip--bookmark .tooltip-content, .tooltip--member .tooltip-content, .tooltip--share .tooltip-content {
+.tooltip--bookmark .tooltip-content,
+.tooltip--member .tooltip-content,
+.tooltip--share .tooltip-content {
     color: #e1e1e1;
 }
 .bbCodeInlineSpoiler {
@@ -402,7 +442,7 @@ textarea.input.input--fitHeight {
     background: #2d2d2d;
     color: #b0b0b0
 }
-.pairs>dt {
+.pairs > dt {
     color: #7a7a7a;
 }
 .memberTooltip--withBanner .memberTooltip-blurbContainer {
@@ -415,16 +455,13 @@ textarea.input.input--fitHeight {
     background: #2d2d2d
 }
 /* Profile */
- .input {
-    background: #0d0d0d;
-}
 .message-responseRow {
     background: #101010;
 }
 .memberHeader-main {
     background: #131313;
 }
-.formRow>dt {
+.formRow > dt {
     background: #151515;
 }
 .overlay-title {
@@ -437,12 +474,14 @@ textarea.input.input--fitHeight {
     bottom: -120px;
     left: -5px;
 }
-.js-alertsMenuBody .alert.is-recently-read, .alert-list .alert.is-recently-read {
+.js-alertsMenuBody .alert.is-recently-read,
+.alert-list .alert.is-recently-read {
     background: #323232
 }
 /* Footer */
- .uix_extendedFooter {
-    background: linear-gradient(to bottom, #2000 0px, #000 100%);;
+.uix_extendedFooter {
+    background: linear-gradient(to bottom, #2000 0px, #000 100%);
+    ;
 }
 .p-footer-inner {
     background: #000;
@@ -452,13 +491,15 @@ textarea.input.input--fitHeight {
     border-top: #000
 }
 /* Other Pages */
- .blockLink {
+.blockLink {
     background: #0e0e0e;
 }
-    .block-row.block-row--alt {
-        background: #272727
-    }
-.menu-linkRow.is-selected, .menu-linkRow:hover, .menu-linkRow:focus {
+.block-row.block-row--alt {
+    background: #272727
+}
+.menu-linkRow.is-selected,
+.menu-linkRow:hover,
+.menu-linkRow:focus {
     background: #333
 }
 .blockLink.is-selected {
@@ -498,43 +539,47 @@ tr:hover {
 .rank-regular {
     color: #b5b5b5
 }
-/* Special */
- 
-@keyframes important_name {
-    0% {
-        color:red;
-    }
-    20% {
-        color:yellow;
-    }
-    40% {
-        color:green;
-    }
-    60% {
-        color:blue;
-    }
-    80% {
-        color:purple;
-    }
-    100% {
-        color:red;
-    }
-}
+
 /*
 
-Honestly, the most annoying thing about Midnight is being a non-premium user for it. Advertisements ruin the whole theme 
-because they're so white and bright.
+Honestly, the most annoying thing about Midnight is being a non-premium user for it. Advertisements ruin the whole theme because they're so white and bright.
 If you want to enjoy this theme to its fullest, BUY PREMIUM!!!! It's cool and you get many things other than a free adblock!
 $10!!!
 
-Fun fact: rbxcentral.com was going to be robloxforum's domain if Jeruhmi hadn't bought RobloxForum.com.
-You can still access RF via that domain, which is why I've added it to the "Applies to" list.
- 
+*/
+}
+
+@-moz-document url("https://www.robloxforum.com/whats-new/") {
+/* Show latest posts on "What's New" page
+These are hidden due to the code that hides "Most Viewed Content"
+so this code readds it.
+-----------------------------------------------
+----------------------------------------------- */
+
+.p-body-pageContent .block ~ .block .block-container .block-body .structItemContainer .structItem--thread {
+    display: table
+}
+
+.p-body-pageContent .block ~ .block .block-container .block-header {
+    display: table
+}
+
+.p-body-pageContent .block ~ .block ~ .block .block-container .block-body .structItemContainer .structItem--thread {
+    display: none
+}
+
+.p-body-pageContent .block ~ .block ~ .block .block-container .block-header {
+    display: none
+}
+}
+
+/* Copyright/Legal Information
+
 -----------------------------------------------
 -----------------------------------------------
- 
+    
 Copyright (C) 2022 Cactile
- 
+    
 This program is free software: you can redistribute it and/or modify it under the terms 
 of the GNU General Public License as published by the Free Software Foundation, either 
 version 3 of the License, or (at your option) any later version.
@@ -544,8 +589,10 @@ without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
 
 See the GNU General Public License for more details.
 https://opensource.org/licenses/GPL-3.0
- 
-*/
 
+RobloxForum, the RobloxForum logo and XenForo belong to their respective owners.
+
+-----------------------------------------------
+-----------------------------------------------
     
-}
+*/
