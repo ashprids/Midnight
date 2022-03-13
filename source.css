@@ -10,7 +10,7 @@ Custom Options */
 }
 
 .username--style3 {
-    color: red;
+    color: #fd5050;
     animation: important_name 3s linear 1s infinite;
     /* This gives the Admin roles a nice rainbow animation.
            Remove the "animation" line to disable this animation. */
@@ -209,6 +209,9 @@ body .uix_searchBar .uix_searchBarInner .uix_searchForm.uix_searchForm--focused 
 .input:focus {
     background: #282828
 }
+.message-avatar-wrapper .message-avatar-online::before {
+    border: #262626 solid 1px
+}
 .uix_copyrightBlock:before {
     content: "Midnight For RobloxForum © Cactile";
     /* You can modify this line if publishing your own fork of the style
@@ -218,6 +221,9 @@ body .uix_searchBar .uix_searchBarInner .uix_searchForm.uix_searchForm--focused 
        Midnight For RobloxForum © Cactile | [theme name] Version by [your name]
         This is a good example of how to modify the line.
     */
+}
+.comment-content .messageNotice.messageNotice--deleted, .messageNotice.messageNotice--deleted {
+    background: #262626
 }
 
 /* Homepage */
@@ -247,6 +253,12 @@ button.button a.button.button--cta:focus {
 }
 .structItem:nth-child(even) {
     background-color: #0e0e0e;
+}
+.node :hover {
+    background: #313131;
+}
+.node--depth2:nth-child(2n) .node-body:hover {
+    background: #313131;
 }
 .button--cta {
     background: #2f2c2c;
