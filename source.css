@@ -321,6 +321,9 @@ a.message-newIndicator {
 .message-articleUserInfo {
     background: #262626
 }
+    .inlineModBar {
+    background: #262626    
+}
 /* Rank Colors */
 .username--style6 {
     /* Verified */
@@ -584,27 +587,3 @@ so this code readds it.
     display: none
 }
 }
-
-/* Copyright/Legal Information
-
------------------------------------------------
------------------------------------------------
-    
-Copyright (C) 2022 Cactile
-    
-This program is free software: you can redistribute it and/or modify it under the terms 
-of the GNU General Public License as published by the Free Software Foundation, either 
-version 3 of the License, or (at your option) any later version.
-
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
-without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
-
-See the GNU General Public License for more details.
-https://opensource.org/licenses/GPL-3.0
-
-RobloxForum, the RobloxForum logo and XenForo belong to their respective owners.
-
------------------------------------------------
------------------------------------------------
-    
-*/
