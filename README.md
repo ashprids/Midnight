@@ -1,3 +1,5 @@
+Midnight no longer works properly, as the website has been upgraded to use the Onefora UI. I will not be remaking Midnight for this new UI, however if you wish to do so yourself then create a pull request. 
+
 # Midnight
 ![Midnight Theme: Preview Image](newpreview.png)
 
